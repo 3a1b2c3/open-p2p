@@ -600,11 +600,15 @@ class InferenceServer(UnixDomainSocketInferenceServer):
         for i, device_name in enumerate(cuda_devices):
             if "RTX 5090" in device_name:
                 logging.info(f"Using GPU {i} ({device_name})")
+                capability = torch.cuda.get_device_capability(i)
+                logging.info(f"CUDA compute capability: {capability[0]}.{capability[1]}")
                 device = f"cuda:{i}"
                 device_idx = i
                 break
         if device is None and len(cuda_devices) == 1:
             logging.warning(f"No RTX 5090 found, using first GPU: {cuda_devices[0]}")
+            capability = torch.cuda.get_device_capability(0)
+            logging.info(f"CUDA compute capability: {capability[0]}.{capability[1]}")
             device = "cuda:0"
             device_idx = 0
         elif device is None:

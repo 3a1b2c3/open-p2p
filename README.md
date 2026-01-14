@@ -258,3 +258,15 @@ If you use the data or model in your research, please cite our paper:
       archivePrefix={arXiv},
       primaryClass={cs.LG}
 }
+
+#### Environment variables
+VCPKG_ROOT C:\workspace\vcpkg
+VCPKG_TARGET_TRIPLET  x64-windows-static-md
+GST_PLUGIN_PATH  C:\Program Files\gstreamer\1.0\msvc_x86_64\lib\gstreamer-1.0
+PATH
+C:\Program Files\gstreamer\1.0\msvc_x86_64\bin
+C:\workspace\vcpkg\installed\x64-windows\tools\pkgconf
+C:\workspace\racer-x\_build\host-deps\msvc\VC\Tools\MSVC\14.29.30133\bin\HostX64\x64
+C:\bin\protoc-33.4-win64\bin
+C:\Program Files\gstreamer\1.0\msvc_x86_64\bin
+C:\Users\kschmid\.cargo\bin

@@ -279,6 +279,12 @@ impl ZMQQueueClient {
 
         socket.connect(url)?;
 
+        // Debug print to indicate DEALER socket creation and connection
+        println!(
+            "ZMQQueueClient: DEALER socket created and connected to server at {}",
+            url
+        );
+
         // println!(
         //     "ZMQQueueClient {}, id {} connected to server, sending ready.",
         //     url, client_id
