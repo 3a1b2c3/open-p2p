@@ -4,7 +4,7 @@ name = "elefant"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = "==3.13.2"
+requires-python = ">=3.12"
 dependencies = [
     "boto3>=1.35.80",
     "flask-cors>=5.0.0",
