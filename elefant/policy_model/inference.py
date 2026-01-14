@@ -799,7 +799,7 @@ class InferenceServer(UnixDomainSocketInferenceServer):
     async def _infer_video(
         self,
         request_iterator: AsyncIterator[_Request],
-    ) -> AsyncGenerator[video_inference_pb2.Action]:
+    ) -> AsyncGenerator[video_inference_pb2.Action, None]:
         # This is a bit convoluted because gRPC recommends using their async methods for speed.
         # but the torch stuff has to happen on another thread otherwise it blocks all the async
         # stuff (and async Queue is not thread safe).
