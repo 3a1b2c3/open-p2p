@@ -42,7 +42,7 @@ dependencies = [
     "torchmetrics>=1.6.1; sys_platform != 'darwin'",
     "protoletariat>=3.3.9",
     "lightning>=2.5.0; sys_platform != 'darwin'",
-    "s3fs>=2025.2.0",
+    "s3fs",
     "jsonlines>=4.0.0",
     "tensorboard>=2.19.0",
     "torch-tb-profiler>=0.4.3; sys_platform != 'darwin'",
